@@ -1,3 +1,24 @@
+.home-button {
+    z-index: 1;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    padding: 10px 16px;
+    background-color: #222222;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+}
+.home-button:hover {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
 :root {
     --gradient1: #ffca9a;
     --gradient2: #ff88bb;
@@ -7,14 +28,16 @@
     --ft1: #eeeeee;
 }
 
-body {
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    padding: 0;
-    margin: 0;
+    background-color: var(--bg1);
+}
+
+body {
     background-color: var(--bg1);
 }
 

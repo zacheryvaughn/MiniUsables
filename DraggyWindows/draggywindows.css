@@ -1,4 +1,19 @@
+.home-button {
+    z-index: 1;
+    position: absolute;
+    text-decoration: none;
+    padding: 10px 16px;
+    background-color: #111111;
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+}
+.home-button:hover {
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+}
+
 * {
+    font-family: Helvetica, Arial, sans-serif;
     color: #ffffff;
     box-sizing: border-box;
     padding: 0;
