@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const blobsFolderPath = 'blobs/';
 
     async function countBlobFiles() {
+        console.log("Counting SVG files...")
         try {
             let count = 0;
             while (true) {
@@ -52,13 +53,13 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
             return count;
         } catch (error) {
-            console.log("'" + blobsFolderPath + "' SVG folder missing.");
+            console.log("'" + blobsFolderPath + "' SVG folder not found.");
             return 0;
         }
     }
     
     const numberOfBlobs = await countBlobFiles();
-    console.log("Found " + numberOfBlobs + " SVG files in blobs folder.");
+    console.log("Found " + numberOfBlobs + " SVG files in blobs folder. (ignore 404)");
 
     // Custom easing function with increased speed towards start and end
     function customEase(t) {
