@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     let currentStep = 0;
     let currentBlobIndex = 0;
-    const blobsFolderPath = '/SquishyBlob/blobs/';
+    const blobsFolderPath = '/MiniUsables/SquishyBlob/blobs/';
 
     async function countBlobFiles() {
         try {
