@@ -64,7 +64,7 @@ p {
 }
 
 #target-blob {
-    --steps: 1000;
+    --steps: 120;
     --duration: 2s;
     --alignment: 0px 0px;
     /* Adjust color in HTML */

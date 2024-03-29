@@ -9,11 +9,9 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Fetch and parse CSS Variables with defaults
     let stepsValue = style.getPropertyValue('--steps').trim();
     stepsValue = stepsValue !== '' ? stepsValue : 'auto'; // Default to 'auto' if not specified
-    console.log("Steps value:", stepsValue);
 
     const durationValue = style.getPropertyValue('--duration').trim();
     const durationInSeconds = durationValue ? parseFloat(durationValue) : 2; // Default to 2 seconds if not specified
-    console.log("Duration value:", durationInSeconds);
 
     const alignment = style.getPropertyValue('--alignment').trim();
 
@@ -25,10 +23,11 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     const fps = 60; // Assume 60 fps for "auto"
     const totalSteps = stepsValue === 'auto' ? durationInSeconds * fps : parseInt(stepsValue, 10);
-    console.log("Total steps:", totalSteps);
+    console.log("Total steps:", totalSteps, "(for each svg transition)");
 
     let animationDuration = durationInSeconds * 1000;
-    console.log("Animation duration:", animationDuration / 1000, "seconds");
+    console.log("Duration:", animationDuration / 1000, "seconds (for each svg transition)");
+    console.log("Animation speed:", (totalSteps / durationInSeconds), "fps");
     
     targetBlob.addEventListener('mousedown', function() {
         console.log("Hey, that tickles!");
@@ -38,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     let currentStep = 0;
     let currentBlobIndex = 0;
-    const blobsFolderPath = 'blobs/';
+    const blobsFolderPath = '/SquishyBlob/blobs/';
 
     async function countBlobFiles() {
         try {
@@ -148,5 +147,4 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     startAnimation();
-    console.log("Script execution complete.");
 });
