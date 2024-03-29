@@ -68,7 +68,7 @@ p {
     --duration: 2s;
     --alignment: 0px 0px;
     /* Adjust color in HTML */
-    width: 70%;
+    width: 100%;
 }
 
 /* Let's make the SVG rotate */
