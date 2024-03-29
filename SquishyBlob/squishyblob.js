@@ -41,25 +41,22 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     async function countBlobFiles() {
         try {
-            const response = await fetch(blobsFolderPath);
-            console.log("Found '" + blobsFolderPath + "' SVG folder.");
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, "text/html");
-            const links = doc.querySelectorAll('a');
             let count = 0;
-            links.forEach(link => {
-                if (link.href.endsWith('.svg')) {
-                    count++;
+            while (true) {
+                const response = await fetch(`${blobsFolderPath}blob${count + 1}.svg`);
+                if (!response.ok) {
+                    // Stop fetching when a file is not found
+                    break;
                 }
-            });
+                count++;
+            }
             return count;
         } catch (error) {
             console.log("'" + blobsFolderPath + "' SVG folder missing.");
             return 0;
         }
     }
-
+    
     const numberOfBlobs = await countBlobFiles();
     console.log("Found " + numberOfBlobs + " SVG files in blobs folder.");
 
