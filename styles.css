@@ -20,7 +20,7 @@
 /* NORMALIZE */
 * {
     /* font */
-    font-family: inter;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: 600;
     color: var(--ft1);
     -webkit-font-smoothing: antialiased;
