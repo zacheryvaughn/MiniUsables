@@ -1,0 +1,73 @@
+:root {
+    --gradient1: #ffca9a;
+    --gradient2: #ff88bb;
+    --gradient3: #b777ff;
+
+    --bg1: #111111;
+    --ft1: #eeeeee;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg1);
+}
+
+h1 {
+    position: absolute;
+    top: 0px;
+    font-size: 48px;
+    color: white;
+}
+
+p {
+    position: absolute;
+    bottom: 0px;
+    font-size: 16px;
+    color: white;
+}
+
+#blob-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
+#target-blob {
+    --steps: 1000;
+    --duration: 2s;
+    --alignment: 0px 0px;
+    /* Adjust color in HTML */
+    width: 70%;
+}
+
+/* Let's make the SVG rotate */
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(70deg);
+    }
+    50% {
+        transform: rotate(200deg);
+    }
+    75% {
+        transform: rotate(280deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+path {
+    animation: rotateAnimation 20s linear infinite;
+    pointer-events: none;
+} 

@@ -1,0 +1,57 @@
+* {
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+body {
+    background-color: #222222;
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 60px;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+#dragarea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 160px);
+    height: calc(100% - 160px);
+    background-color: #111111;
+    border-radius: 20px;
+}
+.dragwindow {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 20px;
+    cursor: grab;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #00000066;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 30px;
+}

@@ -1,0 +1,58 @@
+* {
+    color: #ffffff;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+body {
+    background-color: #222222;
+    width: 100vw;
+    height: 100vh;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+}
+#menu {
+    position: absolute;
+    top: 5px; /* change to "bottom:" to move it to the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* change to "flex-end" if on bottom */
+    gap: 18px;
+    height: 104px;
+    padding: 12px;
+    background-color: #111111;
+    border-radius: 20px;
+}
+.menuitem {
+    --base-size: 80px; /* Custom property for base size */
+    --max-size: 100px; /* Custom property for maximum size */
+    --zoom-distance: 180; /* Custom property for zoom distance */
+    width: var(--base-size); /* Sets the initial width to match the custom "base size" property */
+    height: var(--base-size); /* Sets the initial height to match the custom "base size" property */
+    border-radius:  10px; /* This border radius is scaled up with the item in JS */
+    background-color: #dddddd;
+    cursor: pointer;
+    transition: width 0.1s, height 0.1s, border-radius 0.1s;
+}
+main {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 30px;
+}
